@@ -31,3 +31,4 @@ class Task:
         task.id = data["id"]
         task.completed = data["completed"]
         task.created_at = data["created_at"]
+        return task
