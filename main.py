@@ -45,8 +45,11 @@ def main():
             print("⚠️Δεν βρέθηκε task με αυτό το ID.")
 
     elif args.command == "remove":
-        manager.remove_task(args.id)
-        print(f"🗑 Το task {args.id} διαγράφηκε.")
+        task = manager.remove_task(args.id)
+        if not task:
+            print(f"📭 Δεν υπάρχει task με ID: {args.id}.")
+        else:
+            print(f"🗑 Το task {args.id} διαγράφηκε.")
 
     else:
         parser.print_help()
