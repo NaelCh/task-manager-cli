@@ -36,7 +36,7 @@ def main():
         else:
             for t in tasks:
                 status = "✔️" if t.completed else "❌"
-                print(f"{t.id | {status} | {t.title} - {t.description}}")
+                print(f"{t.id} | {status} | {t.title} - {t.description}")
 
     elif args.command == "done":
         if manager.mark_completed(args.id):
